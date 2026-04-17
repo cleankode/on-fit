@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { galleryImages } from '../data/site';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Gallery() {
+  const { t } = useLang();
   return (
     <section id="gallery" className="relative py-24 md:py-36 overflow-hidden">
       <div className="container-x">
@@ -9,18 +11,15 @@ export default function Gallery() {
           <div>
             <div className="eyebrow mb-4">
               <span className="inline-block h-px w-8 bg-brand-400" />
-              Inside ONFIT
+              {t.gallery.eyebrow}
             </div>
             <h2 className="section-title">
-              The space
+              {t.gallery.titleA}
               <br />
-              <span className="text-brand-400">built for you.</span>
+              <span className="text-brand-400">{t.gallery.titleB}</span>
             </h2>
           </div>
-          <p className="max-w-md text-ink-100/70 text-lg">
-            18,000 sq ft of premium equipment, recovery tools, and design that makes you
-            want to show up — every single day.
-          </p>
+          <p className="max-w-md text-ink-100/70 text-lg">{t.gallery.body}</p>
         </div>
       </div>
 
@@ -49,7 +48,7 @@ export default function Gallery() {
               >
                 <img
                   src={src}
-                  alt="ONFIT facility"
+                  alt={t.gallery.alt}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                 />

@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { programs } from '../data/site';
+import { programImages } from '../data/site';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Programs() {
+  const { t } = useLang();
   return (
     <section id="programs" className="relative py-24 md:py-36 overflow-hidden">
       <div className="absolute inset-0 bg-radial-fade pointer-events-none" />
@@ -12,24 +14,21 @@ export default function Programs() {
           <div>
             <div className="eyebrow mb-4">
               <span className="inline-block h-px w-8 bg-brand-400" />
-              Programs
+              {t.programs.eyebrow}
             </div>
             <h2 className="section-title">
-              Programs built for
+              {t.programs.titleA}
               <br />
-              <span className="text-brand-400">every level.</span>
+              <span className="text-brand-400">{t.programs.titleB}</span>
             </h2>
           </div>
-          <p className="max-w-md text-ink-100/70 text-lg">
-            Whether you're just starting or chasing a new PR, we have a track for you.
-            Explore six pillars designed by coaches who compete.
-          </p>
+          <p className="max-w-md text-ink-100/70 text-lg">{t.programs.body}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {programs.map((p, i) => (
+          {t.programs.items.map((p, i) => (
             <motion.article
-              key={p.title}
+              key={p.tag}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -38,7 +37,7 @@ export default function Programs() {
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img
-                  src={p.image}
+                  src={programImages[i]}
                   alt={p.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"

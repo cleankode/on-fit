@@ -1,15 +1,8 @@
-const items = [
-  'Strength',
-  'Conditioning',
-  'Mobility',
-  'Olympic Lifting',
-  'HIIT',
-  'Recovery',
-  'Performance',
-  'Community',
-];
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Marquee() {
+  const { t } = useLang();
+  const items = t.marquee;
   return (
     <div className="relative border-y border-white/10 bg-ink-900/40 py-6 overflow-hidden">
       <div className="flex gap-14 whitespace-nowrap animate-marquee will-change-transform">

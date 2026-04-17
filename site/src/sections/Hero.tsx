@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Dumbbell, Flame, Timer } from 'lucide-react';
-import { asset, stats } from '../data/site';
+import { asset } from '../data/site';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLang();
+  const chipIcons = [Dumbbell, Flame, Timer];
+
   return (
     <section id="top" className="relative min-h-[100svh] w-full overflow-hidden">
       {/* Video background — lightweight clip (~2.4 MB) for instant first paint */}
@@ -32,46 +36,44 @@ export default function Hero() {
         >
           <div className="eyebrow mb-6">
             <span className="inline-block h-px w-8 bg-brand-400" />
-            Mekelle, Ethiopia · A Training Club
+            {t.hero.eyebrow}
           </div>
 
           <h1 className="text-6xl md:text-8xl lg:text-[9.5rem] font-display leading-[0.88] tracking-hero text-white">
-            One
+            {t.hero.headline1}
             <br />
-            <span className="text-brand-400">More.</span>
+            <span className="text-brand-400">{t.hero.headline2}</span>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg md:text-xl text-ink-100/80 leading-relaxed">
-            18,000 sq ft of branded plate-loaded machines, full dumbbell walls, and a floor
-            built for people who take training seriously. No fluff. No half-reps.
+            {t.hero.body}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a href="#pricing" className="btn-primary text-base group">
-              Start your 7-day trial
+              {t.hero.ctaPrimary}
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a href="#programs" className="btn-ghost text-base group">
               <Play size={16} className="fill-current" />
-              Explore programs
+              {t.hero.ctaSecondary}
             </a>
           </div>
 
           {/* Feature chips */}
           <div className="mt-12 flex flex-wrap gap-3">
-            {[
-              { icon: Dumbbell, label: 'Branded ONFIT machines' },
-              { icon: Flame, label: 'Full dumbbell wall' },
-              { icon: Timer, label: 'Open 5 AM — 11 PM' },
-            ].map((chip) => (
-              <div
-                key={chip.label}
-                className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-ink-100/90 backdrop-blur-sm"
-              >
-                <chip.icon size={15} className="text-brand-400" />
-                {chip.label}
-              </div>
-            ))}
+            {t.hero.chips.map((label, i) => {
+              const Icon = chipIcons[i] ?? Dumbbell;
+              return (
+                <div
+                  key={label}
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-ink-100/90 backdrop-blur-sm"
+                >
+                  <Icon size={15} className="text-brand-400" />
+                  {label}
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -82,7 +84,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl"
         >
-          {stats.map((s) => (
+          {t.stats.map((s) => (
             <div key={s.label} className="border-l border-brand-400/40 pl-4">
               <div className="text-3xl md:text-5xl font-display tracking-hero text-white">
                 {s.value}

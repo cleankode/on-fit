@@ -1,26 +1,9 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-
-const pillars = [
-  {
-    title: 'Branded ONFIT machines',
-    desc: 'Our entire plate-loaded line is custom-built and branded. Honest mechanics, no excuses.',
-  },
-  {
-    title: 'A floor built to deliver',
-    desc: '18,000 sq ft of branded equipment, full dumbbell racks, cable jungles, and dedicated cardio decks.',
-  },
-  {
-    title: '"ONE MORE." mentality',
-    desc: 'It\'s painted on the wall and lived on the floor. We\'re here to push, not posture.',
-  },
-  {
-    title: 'No half-empty racks',
-    desc: 'Every rack full. Every machine working. Every rep counted. That\'s the promise.',
-  },
-];
+import { useLang } from '../i18n/LanguageContext';
 
 export default function About() {
+  const { t } = useLang();
   return (
     <section id="about" className="relative py-24 md:py-36">
       <div className="container-x">
@@ -34,23 +17,20 @@ export default function About() {
           >
             <div className="eyebrow mb-6">
               <span className="inline-block h-px w-8 bg-brand-400" />
-              Why ONFIT
+              {t.about.eyebrow}
             </div>
             <h2 className="section-title">
-              Not another
+              {t.about.titleA}
               <br />
-              <span className="text-stroke">big box</span>
+              <span className="text-stroke">{t.about.titleB}</span>
               <br />
-              <span className="text-brand-400">gym.</span>
+              <span className="text-brand-400">{t.about.titleC}</span>
             </h2>
-            <p className="mt-6 text-lg text-ink-100/80 max-w-md">
-              We built ONFIT for people who want more than mirrors and machines.
-              You bring the drive — we bring the science, the space, and the squad.
-            </p>
+            <p className="mt-6 text-lg text-ink-100/80 max-w-md">{t.about.body}</p>
           </motion.div>
 
           <div className="lg:col-span-7 space-y-5">
-            {pillars.map((p, i) => (
+            {t.about.pillars.map((p, i) => (
               <motion.div
                 key={p.title}
                 initial={{ opacity: 0, y: 30 }}

@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { equipment } from '../data/site';
+import { equipmentImages } from '../data/site';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Equipment() {
+  const { t } = useLang();
   return (
     <section id="equipment" className="relative py-24 md:py-36">
       <div className="container-x">
@@ -9,23 +11,20 @@ export default function Equipment() {
           <div>
             <div className="eyebrow mb-4">
               <span className="inline-block h-px w-8 bg-brand-400" />
-              The Floor
+              {t.equipment.eyebrow}
             </div>
             <h2 className="section-title">
-              Branded.
+              {t.equipment.titleA}
               <br />
-              <span className="text-brand-400">Built different.</span>
+              <span className="text-brand-400">{t.equipment.titleB}</span>
             </h2>
           </div>
-          <p className="max-w-md text-ink-100/70 text-lg">
-            Our entire strength line is custom-built and branded ONFIT. Honest mechanics,
-            commercial-grade construction, and zero compromises.
-          </p>
+          <p className="max-w-md text-ink-100/70 text-lg">{t.equipment.body}</p>
         </div>
 
         {/* Alternating large feature blocks */}
         <div className="space-y-10 md:space-y-16">
-          {equipment.map((item, i) => {
+          {t.equipment.items.map((item, i) => {
             const reverse = i % 2 === 1;
             return (
               <motion.article
@@ -40,7 +39,7 @@ export default function Equipment() {
               >
                 <div className="lg:col-span-7 relative overflow-hidden rounded-3xl border border-white/10 group">
                   <img
-                    src={item.image}
+                    src={equipmentImages[i]}
                     alt={item.title}
                     loading="lazy"
                     className="w-full aspect-[4/3] object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
@@ -48,7 +47,7 @@ export default function Equipment() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/40 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 backdrop-blur-md px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-300">
                     <span className="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse" />
-                    ONFIT signature
+                    {t.equipment.signature}
                   </div>
                 </div>
 
@@ -62,7 +61,7 @@ export default function Equipment() {
                   <p className="text-lg text-ink-100/75 leading-relaxed">{item.desc}</p>
                   <div className="pt-2 flex items-center gap-3 text-sm text-ink-100/60">
                     <span className="inline-block h-px w-10 bg-brand-400/50" />
-                    Commercial-grade · Branded · Built to last
+                    {t.equipment.tagline}
                   </div>
                 </div>
               </motion.article>

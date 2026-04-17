@@ -1,9 +1,11 @@
 import { Instagram, Facebook, Youtube, ArrowUpRight } from 'lucide-react';
 import Wordmark from './Wordmark';
 import Logo from './Logo';
-import { navItems, site } from '../data/site';
+import { navHrefs, site } from '../data/site';
+import { useLang } from '../i18n/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLang();
   return (
     <footer className="relative border-t border-white/10 bg-ink-950 pt-16 pb-10 overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-400/50 to-transparent" />
@@ -14,8 +16,8 @@ export default function Footer() {
               <Wordmark size="text-3xl md:text-4xl" />
             </a>
             <p className="text-ink-100/70 max-w-sm leading-relaxed">
-              A training club built around branded equipment, an honest floor,
-              and a wall that says it all — <span className="text-brand-300 font-semibold">ONE MORE.</span>
+              {t.footer.tagline}{' '}
+              <span className="text-brand-300 font-semibold">ONE MORE.</span>
             </p>
             <div className="flex items-center gap-2">
               {[
@@ -38,15 +40,17 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-xs uppercase tracking-widest text-ink-100/60 mb-4">Explore</div>
+            <div className="text-xs uppercase tracking-widest text-ink-100/60 mb-4">
+              {t.footer.explore}
+            </div>
             <ul className="space-y-2">
-              {navItems.map((n) => (
+              {navHrefs.map((n) => (
                 <li key={n.href}>
                   <a
                     href={n.href}
                     className="group inline-flex items-center gap-1 text-ink-100 hover:text-brand-300 transition"
                   >
-                    {n.label}
+                    {t.nav[n.key]}
                     <ArrowUpRight
                       size={13}
                       className="opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0"
@@ -58,9 +62,11 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-4">
-            <div className="text-xs uppercase tracking-widest text-ink-100/60 mb-4">Visit</div>
+            <div className="text-xs uppercase tracking-widest text-ink-100/60 mb-4">
+              {t.footer.visit}
+            </div>
             <address className="not-italic text-ink-100/90 leading-relaxed">
-              {site.address}
+              {t.address}
               <br />
               <a href={`tel:${site.phone}`} className="hover:text-brand-300">
                 {site.phone}
@@ -85,16 +91,16 @@ export default function Footer() {
             </span>
           </div>
           <div className="mt-3 text-center text-[10px] md:text-xs uppercase tracking-[0.5em] text-ink-100/40">
-            One More.
+            {t.footer.oneMore}
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink-100/50">
-          <div>© {new Date().getFullYear()} ONFIT Athletic Club. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {t.footer.rights}</div>
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Cookies</a>
+            <a href="#" className="hover:text-white">{t.footer.terms}</a>
+            <a href="#" className="hover:text-white">{t.footer.privacy}</a>
+            <a href="#" className="hover:text-white">{t.footer.cookies}</a>
           </div>
         </div>
       </div>
