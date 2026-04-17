@@ -130,13 +130,13 @@ const en: Dict = {
     eyebrow: 'Mekelle, Ethiopia · A Training Club',
     headline1: 'One',
     headline2: 'More.',
-    body: '12,000 sq mt of branded plate-loaded machines, full dumbbell walls, and a floor built for people who take training seriously. No fluff. No half-reps.',
+    body: '12,000 m² of branded plate-loaded machines, full dumbbell walls, and a floor built for people who take training seriously. No fluff. No half-reps.',
     ctaPrimary: 'Start your 7-day trial',
     ctaSecondary: 'Explore programs',
     chips: ['Branded ONFIT machines', 'Full dumbbell wall', 'Open 5 AM — 11 PM'],
   },
   stats: [
-    { value: '12K', label: 'Sq Mt Floor' },
+    { value: '12K', label: 'm² Floor' },
     { value: '120+', label: 'Branded Machines' },
     { value: '5—11', label: 'Daily Hours' },
     { value: '7', label: 'Days a Week' },
@@ -164,7 +164,7 @@ const en: Dict = {
       },
       {
         title: 'A floor built to deliver',
-        desc: '12,000 sq mt of branded equipment, full dumbbell racks, cable jungles, and dedicated cardio decks.',
+        desc: '12,000 m² of branded equipment, full dumbbell racks, cable jungles, and dedicated cardio decks.',
       },
       {
         title: '"ONE MORE." mentality',
@@ -250,7 +250,7 @@ const en: Dict = {
     eyebrow: 'Inside ONFIT',
     titleA: 'The space',
     titleB: 'built for you.',
-    body: '12,000 sq mt of premium equipment, recovery tools, and design that makes you want to show up — every single day.',
+    body: '12,000 m² of premium equipment, recovery tools, and design that makes you want to show up — every single day.',
     alt: 'ONFIT facility',
   },
   pricing: {
