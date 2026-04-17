@@ -130,13 +130,13 @@ const en: Dict = {
     eyebrow: 'Mekelle, Ethiopia · A Training Club',
     headline1: 'One',
     headline2: 'More.',
-    body: '18,000 sq ft of branded plate-loaded machines, full dumbbell walls, and a floor built for people who take training seriously. No fluff. No half-reps.',
+    body: '12,000 sq mt of branded plate-loaded machines, full dumbbell walls, and a floor built for people who take training seriously. No fluff. No half-reps.',
     ctaPrimary: 'Start your 7-day trial',
     ctaSecondary: 'Explore programs',
     chips: ['Branded ONFIT machines', 'Full dumbbell wall', 'Open 5 AM — 11 PM'],
   },
   stats: [
-    { value: '18K', label: 'Sq Ft Floor' },
+    { value: '12K', label: 'Sq Mt Floor' },
     { value: '120+', label: 'Branded Machines' },
     { value: '5—11', label: 'Daily Hours' },
     { value: '7', label: 'Days a Week' },
@@ -164,7 +164,7 @@ const en: Dict = {
       },
       {
         title: 'A floor built to deliver',
-        desc: '18,000 sq ft of branded equipment, full dumbbell racks, cable jungles, and dedicated cardio decks.',
+        desc: '12,000 sq mt of branded equipment, full dumbbell racks, cable jungles, and dedicated cardio decks.',
       },
       {
         title: '"ONE MORE." mentality',
@@ -250,7 +250,7 @@ const en: Dict = {
     eyebrow: 'Inside ONFIT',
     titleA: 'The space',
     titleB: 'built for you.',
-    body: '18,000 sq ft of premium equipment, recovery tools, and design that makes you want to show up — every single day.',
+    body: '12,000 sq mt of premium equipment, recovery tools, and design that makes you want to show up — every single day.',
     alt: 'ONFIT facility',
   },
   pricing: {
@@ -391,13 +391,13 @@ const ti: Dict = {
     eyebrow: 'መቐለ፣ ኢትዮጵያ · ናይ ስፖርት ክለብ',
     headline1: 'One',
     headline2: 'More.',
-    body: '18,000 ካሬ ጫማ ብራንድ ኦንፊት መሳርሒታት፣ ምሉእ ናይ ዳምበል ግድግዳ፣ ንስፖርት ብሕልና ንዝተሃተቱ ዝተዳለወ መድረኽ። ዘይጠቅም ዝርርብ የለን። ፍርቂ ዝተደቑ ራውንዳት የለውን።',
+    body: '12,000 ካሬ ሜትር ብራንድ ኦንፊት መሳርሒታት፣ ምሉእ ናይ ዳምበል ግድግዳ፣ ንስፖርት ብሕልና ንዝተሃተቱ ዝተዳለወ መድረኽ። ዘይጠቅም ዝርርብ የለን። ፍርቂ ዝተደቑ ራውንዳት የለውን።',
     ctaPrimary: 'ናይ 7 መዓልቲ ናጻ ፈተነ ጀምር',
     ctaSecondary: 'መደባት ርአ',
     chips: ['ብራንድ ኦንፊት መሳርሒታት', 'ምሉእ ናይ ዳምበል ግድግዳ', 'ካብ 5:00 ንግሆ ክሳብ 11:00 ለይቲ ክፉት'],
   },
   stats: [
-    { value: '18K', label: 'ካሬ ጫማ መድረኽ' },
+    { value: '12K', label: 'ካሬ ሜትር መድረኽ' },
     { value: '120+', label: 'ብራንድ መሳርሒታት' },
     { value: '5—11', label: 'መዓልታዊ ስዓታት' },
     { value: '7', label: 'መዓልታት ኣብ ሰሙን' },
@@ -425,7 +425,7 @@ const ti: Dict = {
       },
       {
         title: 'ዝዓየየ መድረኽ',
-        desc: '18,000 ካሬ ጫማ ብራንድ መሳርሒታት፣ ምሉእ ናይ ዳምበል መደርደርታት፣ ኬብል ጁንግሎታትን፣ ፍሉይ ናይ ካርዲዮ መድረኻትን።',
+        desc: '12,000 ካሬ ሜትር ብራንድ መሳርሒታት፣ ምሉእ ናይ ዳምበል መደርደርታት፣ ኬብል ጁንግሎታትን፣ ፍሉይ ናይ ካርዲዮ መድረኻትን።',
       },
       {
         title: 'ናይ "ONE MORE." መንፈስ',
@@ -511,7 +511,7 @@ const ti: Dict = {
     eyebrow: 'ውሽጢ ኦንፊት',
     titleA: 'እቲ ቦታ',
     titleB: 'ንዓኻ ዝተዳለወ።',
-    body: '18,000 ካሬ ጫማ ናይ ቀዳማይ ደረጃ መሳርሒታት፣ ናይ ምርግጋእ መሳርሒታት፣ ነፍሲ ወከፍ መዓልቲ ክትመጽእ ዝብህግ ዲዛይን።',
+    body: '12,000 ካሬ ሜትር ናይ ቀዳማይ ደረጃ መሳርሒታት፣ ናይ ምርግጋእ መሳርሒታት፣ ነፍሲ ወከፍ መዓልቲ ክትመጽእ ዝብህግ ዲዛይን።',
     alt: 'ናይ ኦንፊት መደበር',
   },
   pricing: {
