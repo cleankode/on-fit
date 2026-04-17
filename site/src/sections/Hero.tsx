@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Dumbbell, Flame, Timer } from 'lucide-react';
-import { stats } from '../data/site';
+import { asset, stats } from '../data/site';
 
 export default function Hero() {
   return (
@@ -9,13 +9,13 @@ export default function Hero() {
       <div className="absolute inset-0">
         <video
           className="h-full w-full object-cover"
-          src="/videos/vid2.mp4"
+          src={asset('videos/vid2.mp4')}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster="/images/IMG_1252.jpg"
+          poster={asset('images/IMG_1252.jpg')}
         />
         {/* Gradient scrims */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/65 to-ink-950" />

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../data/site';
 
 export default function CTABanner() {
   return (
@@ -14,13 +15,13 @@ export default function CTABanner() {
         >
           <video
             className="absolute inset-0 h-full w-full object-cover"
-            src="/videos/vid1.mp4"
+            src={asset('videos/vid1.mp4')}
             autoPlay
             muted
             loop
             playsInline
             preload="none"
-            poster="/images/IMG_1236.jpg"
+            poster={asset('images/IMG_1236.jpg')}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-950/70 to-ink-950/40" />
           <div className="absolute inset-0 grid-bg opacity-40" />

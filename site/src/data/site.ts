@@ -1,3 +1,6 @@
+export const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 export const site = {
   name: 'ONFIT',
   tagline: 'One More.',
@@ -40,42 +43,42 @@ export const programs = [
     title: 'Strength',
     subtitle: 'Build the foundation',
     desc: 'Free weights, branded ONFIT plate-loaded machines, and progressive overload that actually moves the needle.',
-    image: '/images/IMG_1252.jpg',
+    image: asset('images/IMG_1252.jpg'),
     tag: '01',
   },
   {
     title: 'Hypertrophy',
     subtitle: 'Train the body you want',
     desc: 'Full racks of dumbbells, cables, and isolation machines built for serious volume and time-under-tension.',
-    image: '/images/IMG_1253.jpg',
+    image: asset('images/IMG_1253.jpg'),
     tag: '02',
   },
   {
     title: 'Push & Press',
     subtitle: 'Upper body power',
     desc: 'Chest press, shoulder press, incline and decline — all the angles you need for complete upper-body development.',
-    image: '/images/IMG_1259.jpg',
+    image: asset('images/IMG_1259.jpg'),
     tag: '03',
   },
   {
     title: 'Power & Plate-Loaded',
     subtitle: 'Move heavy iron',
     desc: 'Our signature ONFIT plate-loaded machines deliver pure, biomechanically-tuned strength training.',
-    image: '/images/IMG_1233.jpg',
+    image: asset('images/IMG_1233.jpg'),
     tag: '04',
   },
   {
     title: 'Conditioning',
     subtitle: 'Build the engine',
     desc: 'Cardio decks, dip stations, and dedicated zones for steady-state and interval work — engine on demand.',
-    image: '/images/IMG_1240.jpg',
+    image: asset('images/IMG_1240.jpg'),
     tag: '05',
   },
   {
     title: 'Functional & Cable',
     subtitle: 'Move with purpose',
     desc: 'Cable jungles and functional rigs for athletic, multi-planar training that translates outside the gym.',
-    image: '/images/IMG_1243.jpg',
+    image: asset('images/IMG_1243.jpg'),
     tag: '06',
   },
 ];
@@ -84,34 +87,34 @@ export const equipment = [
   {
     title: 'Signature ONFIT plate-loaded line',
     desc: 'Custom plate-loaded machines designed in-house — pure mechanical feedback, zero cable slop.',
-    image: '/images/IMG_1233.jpg',
+    image: asset('images/IMG_1233.jpg'),
   },
   {
     title: 'Full-rack dumbbell wall',
     desc: 'Branded ONFIT dumbbells from 5 lb to 150 lb. No waiting. No half-empty racks.',
-    image: '/images/IMG_1252.jpg',
+    image: asset('images/IMG_1252.jpg'),
   },
   {
     title: 'The "ONE MORE." floor',
     desc: 'Our flagship strength room — every machine, every plate, branded and ready when you are.',
-    image: '/images/IMG_1236.jpg',
+    image: asset('images/IMG_1236.jpg'),
   },
   {
     title: 'Cable & functional jungle',
     desc: 'Multi-station cable towers for unilateral work, mobility, and pre-hab.',
-    image: '/images/IMG_1243.jpg',
+    image: asset('images/IMG_1243.jpg'),
   },
 ];
 
 export const galleryImages = [
-  '/images/IMG_1456.jpg',
-  '/images/IMG_1233.jpg',
-  '/images/IMG_1234.jpg',
-  '/images/IMG_1236.jpg',
-  '/images/IMG_1237.jpg',
-  '/images/IMG_1238.jpg',
-  '/images/IMG_1245.jpg',
-  '/images/IMG_1252.jpg',
+  asset('images/IMG_1456.jpg'),
+  asset('images/IMG_1233.jpg'),
+  asset('images/IMG_1234.jpg'),
+  asset('images/IMG_1236.jpg'),
+  asset('images/IMG_1237.jpg'),
+  asset('images/IMG_1238.jpg'),
+  asset('images/IMG_1245.jpg'),
+  asset('images/IMG_1252.jpg'),
 ];
 
 export const pricing = [
