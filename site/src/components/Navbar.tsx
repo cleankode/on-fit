@@ -57,17 +57,16 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <LangToggle lang={lang} setLang={setLang} />
           <a href="#contact" className="text-sm font-medium text-ink-100/80 hover:text-white">
             {t.nav.signIn}
           </a>
           <a href="#pricing" className="btn-primary text-sm">
             {t.nav.joinNow}
           </a>
+          <LangToggle lang={lang} setLang={setLang} />
         </div>
 
         <div className="lg:hidden flex items-center gap-2">
-          <LangToggle lang={lang} setLang={setLang} />
           <button
             className="inline-flex items-center justify-center rounded-full border border-white/10 p-2.5 text-white"
             aria-label="Toggle menu"
@@ -75,6 +74,7 @@ export default function Navbar() {
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
+          <LangToggle lang={lang} setLang={setLang} />
         </div>
       </div>
 
